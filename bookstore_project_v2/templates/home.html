@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book Hub</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Book Hub</h1>
+        <div class="icon-buttons">
+            <a href="{{ url_for('buy') }}">
+                <img src="{{ url_for('static', filename='buy_icon.png') }}" class="icon"><br>Buy Books
+            </a>
+            <a href="{{ url_for('sell') }}">
+                <img src="{{ url_for('static', filename='sell_icon.png') }}" class="icon"><br>Sell Books
+            </a>
+            <a href="{{ url_for('admin') }}" class="admin-link">Admin</a>
+        </div>
+    </div>
+</body>
+</html>

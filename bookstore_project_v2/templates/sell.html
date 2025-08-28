@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sell Books</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <a href="{{ url_for('home') }}" class="home-btn">Home</a>
+        <h1>Sell Your Book</h1>
+        <form method="POST" enctype="multipart/form-data">
+            <input type="text" name="title" placeholder="Book Title" required><br>
+            <textarea name="description" placeholder="Book Description" required></textarea><br>
+            <input type="text" name="price" placeholder="Price (e.g. $10)" required><br>
+            <input type="file" name="image" accept="image/*"><br><br>
+            <button type="submit" class="btn">Post Book</button>
+        </form>
+    </div>
+</body>
+</html>

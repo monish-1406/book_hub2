@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <a href="{{ url_for('home') }}" class="home-btn">Home</a>
+        <h1>Admin Dashboard - Delete Books</h1>
+        <div class="book-list">
+            {% for book in books %}
+            <div class="book-card">
+                {% if book.image %}
+                <img src="{{ url_for('static', filename='uploads/' ~ book.image) }}" class="book-image">
+                {% endif %}
+                <h2>{{ book.title }}</h2>
+                <p>{{ book.description }}</p>
+                <span class="price">{{ book.price }}</span><br>
+                <a href="{{ url_for('delete', book_id=book.id) }}" class="btn delete-btn">Delete</a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
