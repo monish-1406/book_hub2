@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "book_hub2"
+version = "0.1.0"
+description = "Book Hub App"
+authors = ["Monish"]
+
+[tool.poetry.dependencies]
+python = "^3.13"
+flask = "^3.0.0"
+gunicorn = "^22.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
